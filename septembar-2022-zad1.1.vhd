@@ -1,3 +1,4 @@
+--koder8x3 uslovna dodela
 
 entity encoder_8to3_binary is
 	port (A : in bit_vector (7 downto 0); F : out bit_vector (2 downto 0));
