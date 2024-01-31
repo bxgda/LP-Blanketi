@@ -80,7 +80,7 @@ begin
 			wait until rising_edge(clock_tb);
 			adresa_tb <= std_logic_vector(to_unsigned(i,3));
 			wait until rising_edge(clock_tb);
-			ulaz_tb <= '0';
+			ulaz_tb <= "00";
 		end loop;
 		wait for 32ns;
 
