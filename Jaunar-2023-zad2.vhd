@@ -1,7 +1,10 @@
+--sinhroni citaj pisi 8x2
+
 Library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
-use IEEE.numeric_std_unsigned.all;
+use IEEE.numeric_std_unsigned.all;
+
 
 entity rw_8x2_sync is
 	port(adresa : in std_logic_vector(2 downto 0);
@@ -64,12 +67,11 @@ begin
 	begin
 		WE_tb <= '0';
 		for i in 0 to 7 loop
-			wait until rising_edge(clock_TB);
+			wait until rising_edge(clock_tb);
 			adresa_TB <= std_logic_vector(to_unsigned(i,3));
 			wait until rising_edge(clock_TB);
-			--report "adress= " & to_string(adresa_tb) & 
- 			--" data_out= " & to_string(izlaz_tb);
-			--ko zna kako se ovo radi nek mi javi
+			report "adress= " & to_string(adresa_tb) & 
+			 " data_out= " & to_string(izlaz_tb);
 		end loop;
 		wait for 32ns;    --4ns puta 8 prolaza kroz petlju
 		
@@ -84,12 +86,11 @@ begin
 
 		WE_tb <= '0';
 		for i in 0 to 7 loop
-			wait until rising_edge(clock_TB);
+			wait until rising_edge(clock_tb);
 			adresa_TB <= std_logic_vector(to_unsigned(i,3));
 			wait until rising_edge(clock_TB);
-			--report "adress= " & to_string(adresa_tb) & 
- 			--" data_out= " & to_string(izlaz_tb);
-			--ko zna kako se ovo radi nek mi javi
+			report "adress= " & to_string(adresa_tb) & 
+			 " data_out= " & to_string(izlaz_tb);
 		end loop;
 		wait for 32ns;
 	end process;
