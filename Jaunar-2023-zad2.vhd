@@ -78,9 +78,9 @@ begin
 		WE_tb <= '1';
 		for i in 0 to 7 loop
 			wait until rising_edge(clock_tb);
-			adresa_tb <= std_logic_vector(to_unsigned(0,3));
+			adresa_tb <= std_logic_vector(to_unsigned(i,3));
 			wait until rising_edge(clock_tb);
-			ulaz_tb <= std_logic_vector(to_unsigned(i,2));
+			ulaz_tb <= '0';
 		end loop;
 		wait for 32ns;
 
