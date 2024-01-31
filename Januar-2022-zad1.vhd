@@ -1,4 +1,4 @@
---demux1x8 konkurentna dodela
+--demux1x8 konkurentna dodela i proizvoljan TB
 
 entity demux_1to8 is
 port (A : in bit; Sel : in bit_vector(2 downto 0); F : out bit_vector(7 downto 0));
