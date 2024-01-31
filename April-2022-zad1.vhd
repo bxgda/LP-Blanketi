@@ -1,3 +1,5 @@
+--mux8x1 konkurentna dodela
+
 entity mux_8to1 is
 	port (A : in bit_vector (7 downto 0); Sel : in bit_vector (2 downto 0); F : out bit);
 end entity;
